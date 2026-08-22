@@ -9,7 +9,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
-
+  # extra nix features
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Use nvidia instead of nouveau.
   hardware.graphics = {
     enable = true;
