@@ -16,18 +16,19 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/fa084942-0b74-48f6-a4a1-19baaa07778f";
       fsType = "btrfs";
+      options = [ "compress=zstd" "x-initrd.mount" ];
     };
 
   fileSystems."/home" =
     { device = "/dev/disk/by-uuid/fa084942-0b74-48f6-a4a1-19baaa07778f";
       fsType = "btrfs";
-      options = [ "subvol=home" ];
+      options = [ "compress=zstd" "subvol=home" ];
     };
 
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/fa084942-0b74-48f6-a4a1-19baaa07778f";
       fsType = "btrfs";
-      options = [ "subvol=nix" ];
+      options = [ "compress=zstd" "x-initrd.mount" "subvol=nix" ];
     };
 
   fileSystems."/boot" =
