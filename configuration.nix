@@ -20,8 +20,14 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
-
+ 
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
+  
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
+  };
 
   xdg.portal = {
   enable = true;
