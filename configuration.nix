@@ -107,6 +107,7 @@
       wineWow64Packages.staging
       winetricks
       ncdu
+      winboat
     ]; 
   };
 
