@@ -120,6 +120,8 @@
     fastfetch
     neovim
     btdu
+    podman
+    podman-compose
     kdePackages.sddm-kcm
     git
   ];
