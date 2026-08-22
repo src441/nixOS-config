@@ -15,7 +15,7 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
   xdg.enable = true;
-
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs.config.allowUnfree = true;
