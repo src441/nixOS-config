@@ -96,7 +96,7 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = false;
 
-  # Enable the KDE Plasma Desktop Environment.
+  # Desktops and WMs
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -139,6 +139,9 @@
     packages = with pkgs; [
       lutris
       steam
+      wineWow64Packages.staging
+      winetricks
+      ncdu
     ]; 
   };
 
