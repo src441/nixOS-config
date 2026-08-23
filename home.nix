@@ -13,6 +13,8 @@
       pkgs.vesktop
       pkgs.prismlauncher
       pkgs.vinegar
+      pkgs.openttd
+      pkgs.unciv
    ];
 
   programs.git = {
