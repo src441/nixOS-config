@@ -22,12 +22,6 @@
   };
  
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
-  
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
-  };
 
   xdg.portal = {
   enable = true;
@@ -113,7 +107,6 @@
       wineWow64Packages.staging
       winetricks
       ncdu
-      winboat
     ]; 
   };
 
@@ -126,8 +119,6 @@
     fastfetch
     neovim
     btdu
-    podman
-    podman-compose
     kdePackages.sddm-kcm
     git
   ];
