@@ -15,6 +15,7 @@
       pkgs.vinegar
       pkgs.openttd
       pkgs.unciv
+      pkgs.cmatrix
    ];
 
   programs.git = {
