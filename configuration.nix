@@ -121,7 +121,11 @@
     btdu
     kdePackages.sddm-kcm
     git
+    unrar
   ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+  "electron-40.10.5" # remove this once winboat update their electron version
+  ];
   system.stateVersion = "26.05"; # Did you read the comment?
 }
