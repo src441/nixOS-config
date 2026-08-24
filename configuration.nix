@@ -75,7 +75,9 @@
   services.flatpak.enable = true;
  
   services.xserver.enable = false;
-
+  
+  boot.initrd.systemd.enable = true;
+  boot.plymouth.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -96,6 +98,17 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
+  
+   programs.aeroshell = {
+   enable = true;
+   fonts.segoe.enable = true;
+   polkit.enable = true;
+   aerothemeplasma = {
+     enable = true;
+     sddm.enable = true;
+     plymouth.enable = true;
+   };
+ };
 
   users.users."cris441" = {
     isNormalUser = true;
