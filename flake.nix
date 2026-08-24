@@ -15,5 +15,5 @@
         aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
       ];
     };
-  }
+  };
 }
