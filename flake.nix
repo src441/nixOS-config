@@ -11,6 +11,7 @@
   outputs = inputs@{ nixpkgs, aerothemeplasma-nix, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
         aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
