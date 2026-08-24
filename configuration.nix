@@ -6,7 +6,8 @@
       ./hardware-configuration.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
+  nixpkgs.overlays = [ inputs.millennium.overlays.default ];
+  
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -116,7 +117,7 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       lutris
-      steam
+      inputs.millennium.packages."${pkgs.system}".millennium-steam
       wineWow64Packages.staging
       winetricks
       ncdu

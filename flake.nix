@@ -5,6 +5,7 @@
       url = "github:nyakase/aerothemeplasma-nix/26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
   
   outputs = inputs@{ nixpkgs, aerothemeplasma-nix, ... }: {
