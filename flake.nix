@@ -10,9 +10,9 @@
   
   outputs = inputs@{ nixpkgs, aerothemeplasma-nix, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
+        { nixpkgs.hostPlatform = "x86_64-linux"; }
         ./configuration.nix
         aerothemeplasma-nix.nixosModules.aerothemeplasma-nix
       ];
