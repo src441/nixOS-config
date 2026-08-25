@@ -19,7 +19,7 @@
     powerManagement.finegrained = false;
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
  
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
@@ -136,6 +136,7 @@
     kdePackages.sddm-kcm
     git
     unrar
+    aria2
   ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
