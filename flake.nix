@@ -1,8 +1,8 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     aerothemeplasma-nix = {
-      url = "github:nyakase/aerothemeplasma-nix/26.05";
+      url = "github:nyakase/aerothemeplasma-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
