@@ -19,7 +19,7 @@
     powerManagement.finegrained = false;
     open = true;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
  
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
@@ -52,7 +52,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -81,6 +81,7 @@
   boot.plymouth.enable = true;
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.defaultSession = "aerothemeplasma";  
 
   services.xserver.xkb = {
     layout = "pt";
@@ -121,6 +122,7 @@
       wineWow64Packages.staging
       winetricks
       ncdu
+      vlc
     ]; 
   };
 

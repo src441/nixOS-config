@@ -9,7 +9,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
   home.packages = [
-      pkgs.vlc
       pkgs.kdePackages.kate
       pkgs.vesktop
       pkgs.prismlauncher
