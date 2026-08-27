@@ -58,6 +58,7 @@
   networking.networkmanager.enable = true;
   networking.firewall = {
     enable = true;
+    backend = "firewalld";
   };
 
   time.timeZone = "Europe/Lisbon";
