@@ -57,10 +57,10 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
   networking.firewall = {
-    enable = true;
+    enable = false;
     backend = "firewalld";
   };
-
+  services.firewalld.enable = true;
   time.timeZone = "Europe/Lisbon";
 
   i18n.defaultLocale = "pt_PT.UTF-8";
