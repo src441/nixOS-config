@@ -8,6 +8,7 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.overlays = [ inputs.millennium.overlays.default ];
   
+  hardware.uinput.enable = true;
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -127,7 +128,7 @@
   users.users."cris441" = {
     isNormalUser = true;
     description = "cris441";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "uinput" ];
     packages = with pkgs; [
       lutris
       inputs.millennium.packages."${pkgs.system}".millennium-steam
