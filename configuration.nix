@@ -82,6 +82,12 @@
   services.flatpak.enable = true;
   programs.kdeconnect.enable = true; 
   services.xserver.enable = false;
+    services.sunshine = {
+    enable = true;
+    autoStart = true;
+    capSysAdmin = true; # only needed for Wayland -- omit this when using with Xorg
+    openFirewall = true;
+  };
   
   boot.initrd.systemd.enable = true;
   boot.plymouth.enable = true;
@@ -142,9 +148,6 @@
     neovim
     btdu
     kdePackages.sddm-kcm
-    kdePackages.krdp
-    kdePackages.krfb
-    kdePackages.oxygen-icons
     git
     unrar
     aria2
