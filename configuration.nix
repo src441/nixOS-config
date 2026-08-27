@@ -80,7 +80,7 @@
   };
 
   services.flatpak.enable = true;
- 
+  programs.kdeconnect.enable = true; 
   services.xserver.enable = false;
   
   boot.initrd.systemd.enable = true;
@@ -142,6 +142,9 @@
     neovim
     btdu
     kdePackages.sddm-kcm
+    kdePackages.krdp
+    kdePackages.krfb
+    kdePackages.oxygen-icons
     git
     unrar
     aria2
