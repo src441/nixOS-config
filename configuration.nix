@@ -61,6 +61,8 @@
     backend = "firewalld";
   };
   services.firewalld.enable = true;
+  networking.nftables.enable = true;
+
   time.timeZone = "Europe/Lisbon";
 
   i18n.defaultLocale = "pt_PT.UTF-8";
