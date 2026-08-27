@@ -145,6 +145,7 @@
     git
     unrar
     aria2
+    firewalld-gui
   ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
