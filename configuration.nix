@@ -54,7 +54,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
     virtualisation.libvirtd = {
     enable = true;
-    qemu.ovmf.enable = true; 
     qemu.swtpm.enable = true; 
   };
   virtualisation.spiceUSBRedirection.enable = true;  
