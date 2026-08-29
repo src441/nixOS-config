@@ -52,7 +52,13 @@
   
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
+    virtualisation.libvirtd = {
+    enable = true;
+    qemu.ovmf.enable = true; 
+    qemu.swtpm.enable = true; 
+  };
+  virtualisation.spiceUSBRedirection.enable = true;  
+  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -122,7 +128,7 @@
   users.users."cris441" = {
     isNormalUser = true;
     description = "cris441";
-    extraGroups = [ "networkmanager" "wheel" "uinput" ];
+    extraGroups = [ "networkmanager" "wheel" "uinput" "libvirtd" ];
     packages = with pkgs; [
       lutris
       inputs.millennium.packages."${pkgs.system}".millennium-steam
@@ -144,6 +150,12 @@
     btdu
     kdePackages.sddm-kcm
     git
+    virt-manager
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    spice-vdagent
     unrar
     aria2
     firewalld-gui
