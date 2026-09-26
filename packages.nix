@@ -25,6 +25,7 @@
    luanti
    # rpcs3 - broken packages :/
    shadps4
+   shadps4-qtlauncher
    mame
    bitwarden-desktop
    uget
