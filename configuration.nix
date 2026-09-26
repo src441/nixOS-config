@@ -7,7 +7,7 @@
       ./packages.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   services.hardware.openrgb = {
     enable = true;
     package = pkgs.openrgb-with-all-plugins;

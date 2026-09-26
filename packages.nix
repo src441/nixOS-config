@@ -23,6 +23,9 @@
    unciv
    lutris
    luanti
+   # rpcs3 - broken packages :/
+   shadps4
+   mame
    bitwarden-desktop
    uget
    qbittorrent
