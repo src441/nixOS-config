@@ -23,7 +23,7 @@
    unciv
    lutris
    luanti
-   # rpcs3 - broken packages :/
+   rpcs3
    shadps4
    shadps4-qtlauncher
    mame
