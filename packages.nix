@@ -6,6 +6,7 @@
 
  environment.systemPackages = with pkgs;  [
    fastfetch
+   unrar
    ncdu
    i2c-tools
    pciutils
