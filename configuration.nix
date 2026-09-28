@@ -7,6 +7,11 @@
       ./packages.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  
+  # fix for rpcs3
+  security.pam.loginLimits = [
+  { domain = "@wheel"; type = "-"; item = "memlock"; value = "unlimited"; }
+  ];
 
   services.hardware.openrgb = {
     enable = true;
@@ -89,7 +94,7 @@
 
   services.xserver.xkb = {
     layout = "pt";
-    variant = "nodeadkeys";
+    # variant = "nodeadkeys";
   };
 
   console.keyMap = "pt-latin1";

@@ -25,6 +25,7 @@
    lutris
    luanti
    rpcs3
+   rusty-psn-gui
    shadps4
    shadps4-qtlauncher
    mame
