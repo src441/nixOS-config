@@ -27,15 +27,7 @@
    unciv
    lutris
    luanti
-   rpcs3
-   (pkgs.rpcs3.overrideAttrs (old: {
-    src = pkgs.fetchFromGitHub {
-      owner = "RPCS3";
-      repo = "rpcs3";
-      rev = "fc93d932c8560f763f5223c0a4165cc53bceeb3f";
-      hash = "sha256-dOwpDQyv+nxOxL+OJeLQfYAbKnA3MGf5Ash5BOH3FE4="; 
-    };
-   }))
+   #rpcs3 broken AGAIN :/ 
    rusty-psn-gui
    shadps4
    shadps4-qtlauncher
