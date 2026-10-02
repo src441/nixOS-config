@@ -3,7 +3,7 @@
 {
  programs.steam.enable = true;
  programs.firefox.enable = true;
-
+ 
  environment.systemPackages = with pkgs;  [
    fastfetch
    unrar
@@ -27,7 +27,7 @@
    unciv
    lutris
    luanti
-   #rpcs3 broken AGAIN :/ 
+   master.rpcs3
    rusty-psn-gui
    shadps4
    shadps4-qtlauncher

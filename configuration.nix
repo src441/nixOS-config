@@ -7,8 +7,6 @@
       ./packages.nix
     ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  nix.settings.access-tokens = ["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"];  
-  # fix for rpcs3
   security.pam.loginLimits = [
   { domain = "@wheel"; type = "-"; item = "memlock"; value = "unlimited"; }
   ];
