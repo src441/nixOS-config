@@ -103,6 +103,12 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
+  services.flatpak.enable = true;
+  programs.nix-ld.enable = true;
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };  
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "26.05"; 
