@@ -47,7 +47,7 @@
     "2606:4700:4700::1111"
     "2606:4700:4700::1001"
   ];
-  networking.networkmanager.dns = "none";
+#  networking.networkmanager.dns = "none";
 
   time.timeZone = "Europe/Lisbon";
 
@@ -68,8 +68,7 @@
   services.xserver.enable = true;
   programs.gpaste.enable = true;
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
-  services.xserver.desktopManager.cinnamon.sessionPath = [ pkgs.gpaste ];
+  services.xserver.desktopManager.xfce.enable = true;
 
   services.xserver.xkb = {
     layout = "pt";
